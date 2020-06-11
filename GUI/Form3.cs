@@ -104,8 +104,13 @@ namespace GUI
             //Creating iTextSharp Table from the DataTable data
             PdfPTable pdfTable = new PdfPTable(dataGridView.ColumnCount);
             pdfTable.DefaultCell.Padding = 3;
-            pdfTable.WidthPercentage = 30;
-            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+            pdfTable.WidthPercentage = 50;
+            //int[] intTblWidth = { 20, 50, 50, 50,50 };
+
+            //pdfTable.setH
+
+
+            pdfTable.HorizontalAlignment = Element.ALIGN_CENTER;
             pdfTable.DefaultCell.BorderWidth = 1;
 
             //Font f = new System.Drawing.Font(bf, 12, Font.NORMAL);
@@ -114,7 +119,8 @@ namespace GUI
             //Adding Header row
             foreach (DataGridViewColumn column in dataGridView.Columns)
             {
-                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText,text));
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text)) { HorizontalAlignment = iTextSharp.text.Element.ALIGN_CENTER, VerticalAlignment = iTextSharp.text.Element.ALIGN_MIDDLE };
+                cell.MinimumHeight = 30;
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
                 pdfTable.AddCell(cell);
             }
@@ -129,6 +135,7 @@ namespace GUI
                         String s = cell.Value.ToString();
                         //PdfCe
                         PdfPCell cell2 = new PdfPCell(new Phrase(s,text));
+                        cell2.MinimumHeight = 30;
                         pdfTable.AddCell(cell2);
                     }
                     catch { }

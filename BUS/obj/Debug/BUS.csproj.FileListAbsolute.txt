@@ -1,0 +1,11 @@
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\bin\Debug\BUS.dll
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\bin\Debug\BUS.pdb
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\bin\Debug\DAL.dll
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\bin\Debug\DTO.dll
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\bin\Debug\DAL.pdb
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\bin\Debug\DTO.pdb
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\obj\Debug\BUS.dll
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\BUS\obj\Debug\BUS.pdb

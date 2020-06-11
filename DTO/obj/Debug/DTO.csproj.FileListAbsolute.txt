@@ -1,0 +1,6 @@
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\DTO\bin\Debug\DTO.dll
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\DTO\bin\Debug\DTO.pdb
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\DTO\obj\Debug\DTO.dll
+D:\K2 - Nam3\C#\BTL\BTL_Nhom5_QuanLyThuVien\DTO\obj\Debug\DTO.pdb
