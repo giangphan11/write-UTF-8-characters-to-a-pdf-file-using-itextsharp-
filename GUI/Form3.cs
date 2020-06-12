@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -119,7 +120,8 @@ namespace GUI
             //Adding Header row
             foreach (DataGridViewColumn column in dataGridView.Columns)
             {
-                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text)) { HorizontalAlignment = iTextSharp.text.Element.ALIGN_CENTER, VerticalAlignment = iTextSharp.text.Element.ALIGN_MIDDLE };
+                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text))
+                { HorizontalAlignment = iTextSharp.text.Element.ALIGN_CENTER, VerticalAlignment = iTextSharp.text.Element.ALIGN_MIDDLE };
                 cell.MinimumHeight = 30;
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
                 pdfTable.AddCell(cell);
@@ -153,7 +155,43 @@ namespace GUI
                 Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(pdfDoc, stream);
                 pdfDoc.Open();
+                // Tieude
+                
+
+                // khoang trang
+                var spacer = new Paragraph("")
+                {
+                    SpacingBefore = 10f,
+                    SpacingAfter = 10f,
+                };
+
+                // Bang
+                var headTable = new PdfPTable(new[] { .5f, 1f })
+                {
+                    HorizontalAlignment = Left,
+                    WidthPercentage = 75,
+                    DefaultCell = { MinimumHeight = 30f }
+                };
+                headTable.WidthPercentage = 50; // set Width for table
+                headTable.HorizontalAlignment = Element.ALIGN_CENTER; // align: center
+                headTable.AddCell(new PdfPCell(new Phrase("Tên thư viện:", text)));
+                headTable.AddCell(new PdfPCell(new Phrase("Thư viện X", text)));
+                headTable.AddCell(new PdfPCell(new Phrase("Ngày lập", text)));
+                headTable.AddCell(new PdfPCell(new Phrase(DateTime.Now.ToString("dd/MM/yyyy"), text)));
+                headTable.AddCell(new PdfPCell(new Phrase("Người lập:", text)));
+                headTable.AddCell(new PdfPCell(new Phrase("Phan Bá Giang", text)));
+
+                iTextSharp.text.Font text2 = new iTextSharp.text.Font(bf, 24, iTextSharp.text.Font.BOLD);
+                Paragraph p1 = new Paragraph("TOP 10 TÀI LIỆU MƯỢN NHIỀU NHẤT",text2);
+                p1.Alignment = Element.ALIGN_CENTER;
+
+                pdfDoc.Add(p1);
+                pdfDoc.Add(spacer);
+                pdfDoc.Add(headTable);
+                pdfDoc.Add(spacer);
                 pdfDoc.Add(pdfTable);
+                
+                
                 pdfDoc.Close();
                 stream.Close();
             }
@@ -163,6 +201,18 @@ namespace GUI
             ExportPdf(gvTopSach);
             MessageBox.Show("In thành công !");
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            String date = DateTime.Now.ToString("dd/MM/yyyy");
+            MessageBox.Show(date);
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            String timeNow = DateTime.Now.ToString("dd/MM/yyyy");
+            txtNgayLap.Text = timeNow;
         }
     }
 }
