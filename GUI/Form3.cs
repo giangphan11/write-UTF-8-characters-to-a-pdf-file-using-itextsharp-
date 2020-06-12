@@ -170,12 +170,21 @@ namespace GUI
                 {
                     HorizontalAlignment = Left,
                     WidthPercentage = 75,
-                    DefaultCell = { MinimumHeight = 30f }
+                    DefaultCell = { MinimumHeight = 30f, BorderWidthLeft=2}
+                };
+                //headTable.DefaultCell.BorderWidth = 0f;
+                var cell1 = new PdfPCell(new Phrase("Tên thư viện:", text))
+                {
+                    MinimumHeight = 25f
+                };
+                var cell2 = new PdfPCell(new Phrase("Tên thư x", text))
+                {
+                    MinimumHeight = 25f
                 };
                 headTable.WidthPercentage = 50; // set Width for table
                 headTable.HorizontalAlignment = Element.ALIGN_CENTER; // align: center
-                headTable.AddCell(new PdfPCell(new Phrase("Tên thư viện:", text)));
-                headTable.AddCell(new PdfPCell(new Phrase("Thư viện X", text)));
+                headTable.AddCell(cell1);
+                headTable.AddCell(cell2);
                 headTable.AddCell(new PdfPCell(new Phrase("Ngày lập", text)));
                 headTable.AddCell(new PdfPCell(new Phrase(DateTime.Now.ToString("dd/MM/yyyy"), text)));
                 headTable.AddCell(new PdfPCell(new Phrase("Người lập:", text)));
